@@ -39,7 +39,7 @@ async function main() {
         const issueResponse = await octokit.rest.issues.get({
           owner,
           repo,
-          issueNumber,
+          issue_number: issueNumber,
         });
         console.log(issueResponse);
         issue = issueResponse.data;
