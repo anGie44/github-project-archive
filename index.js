@@ -23,7 +23,7 @@ async function main() {
     cards = response.data;
     core.info(`Found ${cards.length} cards in done column`);
   } catch (error) {
-    core.setFailed('Error retrieving project cards in done column');
+    core.setFailed(`Error retrieving project cards in done column: ${error}`);
   }
 
   for (let index = 0; index < cards.length; index += 1) {
