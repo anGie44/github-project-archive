@@ -34,13 +34,13 @@ async function main() {
       let issue = {};
       try {
         // eslint-disable-next-line no-await-in-loop
-        const issueReponse = await octokit.rest.issues.get({
+        const issueResponse = await octokit.rest.issues.get({
           owner,
           repo,
           issueNumber,
         });
-        issue = issueReponse.data;
-        console.log(issue);
+        console.log(issueResponse);
+        issue = issueResponse.data;
       } catch (error) {
         core.setFailed(`Error retrieving issue from card ${error}`);
       }
