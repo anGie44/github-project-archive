@@ -32,6 +32,7 @@ async function main() {
       console.log(card.content_url);
       const urlSegments = card.content_url.split('/');
       const issueNumber = urlSegments[urlSegments.length - 1];
+      console.log(`${owner} ${repo} ${issueNumber}`);
       let issue = {};
       try {
         // eslint-disable-next-line no-await-in-loop
