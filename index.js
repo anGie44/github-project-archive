@@ -40,10 +40,10 @@ async function main() {
           issueNumber,
         });
         issue = issueReponse.data;
+        console.log(issue);
       } catch (error) {
         core.setFailed(`Error retrieving issue from card ${error}`);
       }
-
 
       if (issue.milestone.title === GITHUB_RELEASE_NAME) {
         core.info(`Issue ${issue.number} has been released`);
