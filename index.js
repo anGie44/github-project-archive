@@ -29,6 +29,7 @@ async function main() {
   for (let index = 0; index < cards.length; index += 1) {
     const card = cards[index];
     if (card.content_url) {
+      console.log(card.content_url);
       const urlSegments = card.content_url.split('/');
       const issueNumber = urlSegments[urlSegments.length - 1];
       let issue = {};
